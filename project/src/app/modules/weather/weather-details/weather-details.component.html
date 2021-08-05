@@ -1,0 +1,46 @@
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<!-- <button (click)="getWeather()">testWeather</button> -->
+<div class="all">
+    <div class="container1">
+      <div class="details">
+        <h1 class="city_h1">{{currentCity.name}}</h1>
+        <div class="temperature1">{{currentWeather[0].Temperature.Metric.Value}}</div>
+        <p class="summaryText">{{currentWeather[0].WeatherText}}</p>
+    </div>
+    <button class="favo1" (click)="addToFavorites()" id="addOrRemove">add to favorite</button>
+  </div>
+  
+  <br><br>
+  <!-- {{fiveDayWeather|json}} -->
+  
+  <div class="container SDays">
+    <div class="row">
+         
+    <div *ngFor="let t of fiveDayWeather.DailyForecasts" class="container col-md">
+      <h5  class="text-center1">{{getDay(t.Date) | date:'EEEE'}}</h5>
+    <h3 class="text-center" >{{(t.Temperature.Maximum.Value-32)*5/9| number:'1.0-0'}} - {{(t.Temperature.Minimum.Value-32)*5/9| number:'1.0-0'}} c</h3>
+    </div>
+    </div>
+
+<!-- <br><br><br><br><br><br><br><br>
+<div class="container">
+    <div class="widget">
+      <div class="details">
+        <div class="temperature"></div>
+        <div class="summary">
+          <p class="summaryText"></p>
+        </div> --> 
+        <!-- <div class="precipitation">{{fiveDayWeather[0].Headline[0].EffectiveDate}}</div> -->
+        <!-- <div class="city"></div>
+      </div>
+      <div class="pictoBackdrop"></div>
+      <div class="pictoFrame"></div>
+      <div class="pictoCloudBig"></div>
+      <div class="pictoCloudFill"></div>
+      <div class="pictoCloudSmall"></div>
+      <div class="iconCloudBig"></div>
+      <div class="iconCloudFill"></div>
+      <div class="iconCloudSmall"></div>
+    </div>
+  </div> -->
+  

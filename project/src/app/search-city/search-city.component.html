@@ -1,0 +1,13 @@
+
+<div class="search">
+<input class="form-control"  (input)="searchCities()" list="datalistOptions" [(ngModel)]="inputText" id="exampleDataList" placeholder="Type to search...">
+<button class="btn_search" (click)="getWeatherByCity()">search</button>
+<datalist id="datalistOptions" >
+    <option  *ngFor="let name of citiesNames" >{{name}}</option>
+</datalist>
+ 
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+  
+  

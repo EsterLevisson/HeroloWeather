@@ -1,0 +1,10 @@
+.btn_home, .btn_favo{
+    width: 50%;
+    padding: 0.5%;
+    border: 0px !important;
+    margin-bottom: 0px !important;
+}
+.btn_favo:hover, .btn_home:hover{
+    background-color: rgb(70, 202, 180);
+
+}
